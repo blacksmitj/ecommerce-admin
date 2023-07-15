@@ -1,6 +1,6 @@
 import prismadb from "@/lib/prismadb";
 import { ColorsClient } from "./components/client";
-import { ColorsColumn } from "./components/columns";
+import { ColorColumn } from "./components/columns";
 import { format } from "date-fns";
 
 const colorsPage = async ({ params }: { params: { storeId: string } }) => {
@@ -13,7 +13,7 @@ const colorsPage = async ({ params }: { params: { storeId: string } }) => {
     },
   });
 
-  const formattedColors: ColorsColumn[] = colors.map((item) => ({
+  const formattedColors: ColorColumn[] = colors.map((item) => ({
     id: item.id,
     name: item.name,
     value: item.value,
